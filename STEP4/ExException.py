@@ -6,7 +6,7 @@ num2 = 0
 
 #print(num/num2)
 
-
+#
 # try:
 #     print(num/num2)
 #     print('success')
@@ -23,7 +23,7 @@ num2 = 0
 # except (TypeError, ValueError) :
 #     print('typeError or valueError')
 
-
+#
 # try:
 #     print('Hello')
 #     print(1/0)
@@ -32,7 +32,7 @@ num2 = 0
 # finally:
 #     print('This code will run no matter what')
 
-
+#
 # try:
 #     print(1)
 #     print(10/0)
@@ -41,12 +41,12 @@ num2 = 0
 # finally:
 #     print('This is executed last')
 
-
+#
 # print(1)
 # raise ValueError
 # print(2)
 
-
+#
 # try:
 #     print(1/0)
 # except ZeroDivisionError :
@@ -54,12 +54,12 @@ num2 = 0
 
 
 # raise NameError('세부정보')
-
+#
 # print(1)
 # assert 2 + 2 == 4
 # print(2)
 # assert 1 + 1 == 3
 # print(3)
-
-tmp = -10
-assert tmp > 0, 'Colder than absolute zero!'
+#
+tmp3 = -10
+assert tmp3 > 0, 'Colder than absolute zero!'

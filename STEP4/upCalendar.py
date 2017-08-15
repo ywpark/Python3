@@ -48,6 +48,8 @@ def printFileCalendar(year, month):
 
         totalStr = addEnterString(totalStr)
 
+        raise NameError
+
         if (currentColPos != 0):
             # 시작지점 세팅
             totalStr += '  \t\t' * (int(totalDays[0]) + 1)
@@ -75,7 +77,7 @@ while True:
         # 출력 결정 ( 1. console , 2. file )
         userOutput = input('Output ? ( 1. CONSOLE , 2. FILE , 3. END PROGRAM ) : ')
 
-        if not  userOutput in ('1', '2'):
+        if not userOutput in ('1', '2'):
             if userOutput == '3':
                 print('프로그램 종료')
                 break
