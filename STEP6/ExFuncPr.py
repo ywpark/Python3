@@ -7,7 +7,7 @@
 #     return x + 5
 #
 # print(apply_twice(add_five,10))
-#
+
 # #pure function
 # #memoization
 # def pure_function(x,y):
@@ -42,7 +42,7 @@
 #
 # nums = [11,22,33,44,55]
 # #result = list(map(add_five, nums))
-# result = list(map(lambda x: x+ 5, nums))
+# result = map(lambda x: x+ 5, nums)
 # print(result)
 #
 # #filter는 return a Boolean
@@ -69,22 +69,22 @@
 #
 # print(list(numbers(11)))
 
-# # Decorators
-# def decor(func):
-#     def wrap():
-#         print('==========')
-#         func()
-#         print('==========')
-#     return wrap
-#
-# @decor
-# def print_text():
-#     print('Hello world!')
-#
-# #decorated = decor(print_text)
-# #decorated()
-#
-# print_text()
+# Decorators
+def decor(func):
+    def wrap():
+        print('==========')
+        func()
+        print('==========')
+    return wrap
+
+@decor
+def print_text():
+    print('Hello world!')
+
+decorated = decor(print_text)
+decorated()
+
+#print_text()
 
 # # Recursion 재귀
 #
@@ -121,6 +121,10 @@
 # num_set = {1,2,3,4,5}
 # word_set = set(['spam','eggs','sausage'])
 #
+# num333 = [1,2,2,3,4,56,6,6]
+# print(num333)
+# print(set(num333))
+#
 # print(3 in num_set)
 # print('spam' not in word_set)
 #
@@ -139,12 +143,11 @@
 # print(first - second) # difference
 # print(first ^ second) # symmetric difference
 
-
 # itertools
 
 from itertools import count, cycle, repeat, accumulate, takewhile, product, permutations
 
-for i in count(3):
+for i in count(4,2):
     print(i)
     if i >= 11:
         break
@@ -158,8 +161,9 @@ nums = list(accumulate(range(8)))
 print(nums)
 print(list(takewhile(lambda x:x<=6, nums)))
 
-letters = ('A','B', 'c')
+letters = ('A','B', 'c', 'd')
 print(list(product(letters,range(5))))
 print(list(permutations(letters)))
+
 
 
