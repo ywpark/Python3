@@ -34,7 +34,7 @@ import re
 
 # str = 'My name is David. Hi David.'
 # pattern = r'David'
-# newstr = re.sub(pattern, 'Amy', str)
+# newstr = re.sub(pattern, 'Amy', str, 1)
 # print(newstr)
 
 
@@ -60,7 +60,7 @@ import re
 # if re.match(pattern, 'gray'):
 #     print('Match')
 #
-# if re.match(pattern, 'stingray'):
+# if re.search(pattern, 'stingray'):
 #     print('Match')
 
 
@@ -103,7 +103,7 @@ import re
 
 
 # Metacharacters
-
+#
 # pattern = r'egg(spam)*' #  * zero or more repetitions of the previous thing
 #                         # () * 에서 말한 previous thing can be a single character, a class, or a group of characters in parentheses
 #
@@ -124,7 +124,7 @@ import re
 # if re.match(pattern, 'ggggggggggggggg'):
 #     print('Match 2')
 #
-# if re.match(pattern, 'abc'):
+# if re.match(pattern, 'gabc'):
 #     print('Match 3')
 
 
@@ -168,16 +168,19 @@ import re
 #     print('Match 3')
 
 # # groups in a match can be accessed
-# pattern = r'a(bc)(de)(f(g)h)i'
+# pattern = r'a(bc)d'
+# #pattern = r'[a-z]@([a-z].[a-z])'
 #
 # match = re.match(pattern, 'abcdefghijklmnop')
+# #match = re.match(pattern, 'a@b.d')
+#
 #
 # if match:
 #     print(match.group())   # whole match
 #     print(match.group(0))  # whole match
 #     print(match.group(1))  # nth group from the left
-#     print(match.group(2))
-#     print(match.groups())  # all groups
+#     #print(match.group(2))
+#     print(len(match.groups()))  # all groups
 
 
 # # group naming 형식 -> (?P<name>...) name 으로 접근가능하다
@@ -203,14 +206,14 @@ import re
 # if match:
 #     print('Match 2')
 #
-# match = re.match(pattern, 'griy')
+# match = re.match(pattern, 'graey')
 #
 # if match:
 #     print('Match 3')
 
 # Special Sequences
 
-# pattern = r'(.+) \1' # \1 means a repetition of what was found in group number 1
+# pattern = r'(.+) \0' # \1 means a repetition of what was found in group number 1
 #
 # match = re.match(pattern, 'word word')
 # if match:
@@ -235,7 +238,7 @@ import re
 # if match:
 #     print('Match 2')
 #
-# match = re.match(pattern, '!$?')
+# match = re.match(pattern, '!$?233')
 # if match:
 #     print('Match 3')
 
@@ -257,8 +260,8 @@ import re
 
 # Email Extraction
 
-pattern = r'([\w\.]+)@([\w\.-\]+)(\.[\w\.]+)'
-str = 'Please contact info@sololean.com for assistance'
+pattern = r'([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)'
+str = 'Please contact in123234-.fo@solo-lean.com for assistance'
 
 match = re.search(pattern, str)
 if match:
