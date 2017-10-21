@@ -2,6 +2,7 @@
 
 import re
 
+
 # pattern = r'spam' # raw string
 #
 # if re.match(pattern, 'spamspamspam'): # re.match 는 string beggining 이다
@@ -168,19 +169,19 @@ import re
 #     print('Match 3')
 
 # # groups in a match can be accessed
-# pattern = r'a(bc)d'
-# #pattern = r'[a-z]@([a-z].[a-z])'
-#
-# match = re.match(pattern, 'abcdefghijklmnop')
-# #match = re.match(pattern, 'a@b.d')
-#
-#
-# if match:
-#     print(match.group())   # whole match
-#     print(match.group(0))  # whole match
-#     print(match.group(1))  # nth group from the left
-#     #print(match.group(2))
-#     print(len(match.groups()))  # all groups
+pattern = r'a(bc)d'
+#pattern = r'[a-z]@([a-z].[a-z])'
+
+match = re.match(pattern, 'abcdefghijklmnop')
+#match = re.match(pattern, 'a@b.d')
+
+
+if match:
+    print(match.group())   # whole match
+    print(match.group(0))  # whole match
+    print(match.group(1))  # nth group from the left
+    #print(match.group(2))
+    print(match.groups())  # all groups
 
 
 # # group naming 형식 -> (?P<name>...) name 으로 접근가능하다
@@ -260,9 +261,9 @@ import re
 
 # Email Extraction
 
-pattern = r'([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)'
-str = 'Please contact in123234-.fo@solo-lean.com for assistance'
-
-match = re.search(pattern, str)
-if match:
-    print(match.group())
+# pattern = r'([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)'
+# str = 'Please contact in123234-.fo@solo-lean.com for assistance'
+#
+# match = re.search(pattern, str)
+# if match:
+#     print(match.group())

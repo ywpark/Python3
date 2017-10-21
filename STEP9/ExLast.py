@@ -23,15 +23,15 @@
 # def my_func(x,y=7,*args,**kwargs):
 #     print(x)
 #     print(y)
-#     print(args)
-#     print(kwargs)
+#     print(args[0])
+#     print(kwargs['a'])
 #
 # my_func(2,3,4,5,6,a=7, b=8)
 
 
 # Tuple Unpacking
 
-# numbers = (1,2,3)
+# numbers = 1,2,3
 # a,b,c = numbers
 # print(a)
 # print(b)
@@ -43,7 +43,7 @@
 # print(c)
 
 # # *변수는 나머지를 다가져간다
-# a,b,*c,d = (1,2,3,4,5,6,7) #[1,2,3,4,5,6,7,8,9]
+# a,b,*c,d = [1,2,3,4,5,6,7,8,9]
 # print(a)
 # print(b)
 # print(c)
@@ -70,7 +70,7 @@
 #         break
 # else:
 #     print('Unbroken 2')
-#
+
 
 # try/except 에서도 다른의미 부여
 # try 구문에서 에러없이 정상 실행될때만 else 로직이 실행된다
@@ -91,13 +91,15 @@
 
 
 # __main__
-# # module 마다 name 이 존재하며 해당 변수는 __name__ 이다.
-#
-# def function():
-#     print('This is a module function')
-#
-# if __name__ == '__main__':
-#     print('This is a script')
+# module 마다 name 이 존재하며 해당 변수는 __name__ 이다.
+
+
+def function():
+    print('This is a module function')
+
+print(__name__)
+if __name__ == '__main__':
+    print('This is a script')
 
 
 # Major 3rd-Party Libraries
